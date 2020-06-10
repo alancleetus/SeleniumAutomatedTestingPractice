@@ -9,6 +9,8 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import pages.LoginFailurePage;
+import pages.LoginPage;
 import tests.BaseTest;
  
 public class NegativeLoginTest extends BaseTest {
@@ -16,15 +18,13 @@ public class NegativeLoginTest extends BaseTest {
 	@Test(priority = 1, dataProvider = "getData")
 	public void negativeTest(String username, String password, String expectedErrorMessage) {
 		log.info("Starting negativeTest");
+		driver.get(cr.getLoginUrl());
 
-		log.info("starting negative login page test");
-		driver.get(cr.getBaseUrl()+"/login");
-		driver.findElement(By.id("username")).sendKeys(username);
-		driver.findElement(By.id("password")).sendKeys(password);
-		driver.findElement(By.tagName("button")).click();
-		
+		LoginPage loginPage = new LoginPage(driver);
+		LoginFailurePage failPage = loginPage.invalidLogin(username, password);
+				
 		// Verification
-		String actualErrorMessage = driver.findElement(By.id("flash")).getText();
+		String actualErrorMessage = failPage.getErrorMessage();
 		Assert.assertTrue(actualErrorMessage.contains(expectedErrorMessage),
 				"actualErrorMessage does not contain expectedErrorMessage\nexpectedErrorMessage: "
 						+ expectedErrorMessage + "\nactualErrorMessage: " + actualErrorMessage);

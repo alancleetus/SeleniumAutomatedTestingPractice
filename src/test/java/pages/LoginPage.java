@@ -18,7 +18,7 @@ public class LoginPage {
 
 	@FindBy(tagName="button")
 	WebElement loginButton;
-	
+		
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -42,6 +42,14 @@ public class LoginPage {
 		clickLogin();
 		
 		return new LoginSuccessPage(driver);
+	}
+	
+	public LoginFailurePage invalidLogin(String username, String password) {
+		setUsername(username);
+		setPassword(password);
+		clickLogin();
+
+		return new LoginFailurePage(driver);
 	}
 
 }
