@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite parallel="false" name="Full Test Suite">
+	
+	<test name="LoginTest">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="tests.loginPageTest.LoginPageTest" />
+		</classes>
+	</test> 
+	
+	<test name="NegativeLoginTest">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="tests.loginPageTest.NegativeLoginTest" />
+		</classes>
+	</test> 
+	
+	<test name="FrameTest">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="tests.frameTest.FrameTest" />
+		</classes>
+	</test>
+	
+	
+	<test name="DropDownTest">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="tests.dropDownTest.DropDownTest" />
+		</classes>
+	</test>
+	
+	
+	<test name="CheckBoxTest">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="tests.checkboxTest.CheckboxTest" />
+		</classes>
+	</test>
+	
+	 
+</suite> 
