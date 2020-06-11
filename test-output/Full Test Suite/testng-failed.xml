@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="methods" name="Failed suite [Full Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="4" parallel="methods" name="FrameTest(failed)">
+    <parameter name="browser" value="msedge"/>
+    <classes>
+      <class name="tests.frameTest.FrameTest">
+        <methods>
+          <include name="testFrame"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- tests.frameTest.FrameTest -->
+    </classes>
+  </test> <!-- FrameTest(failed) -->
+</suite> <!-- Failed suite [Full Test Suite] -->

@@ -1,4 +1,4 @@
-package tests.utilities;
+package utilities;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -27,7 +27,7 @@ public class ConfigReader {
 	}
 
 	public String getEdgePath() {
-		return properties.getProperty("edge");
+		return properties.getProperty("msedge");
 	}
 
 	public String getFirefoxPath() {
@@ -49,6 +49,10 @@ public class ConfigReader {
 	
 	public String getFrameUrl() {
 		return getBaseUrl()+properties.getProperty("frameUrl");
+	}
+	
+	public String getLoginCredsXLS() {
+		return properties.getProperty("loginCredsXLS");
 	}
 
 }

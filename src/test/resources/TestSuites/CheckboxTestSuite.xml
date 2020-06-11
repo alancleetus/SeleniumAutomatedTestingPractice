@@ -4,7 +4,7 @@
 	<test name="CheckBoxTest">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="tests.checkboxTest.CheckboxTest" />
+			<class name="tests.CheckboxTest" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

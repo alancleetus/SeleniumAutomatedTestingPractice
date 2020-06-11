@@ -1,6 +1,6 @@
 #browser driver paths
 chrome=src/main/resources/chromedriver.exe
-edge=src/main/resources/msedgedriver.exe
+msedge=src/main/resources/msedgedriver.exe
 firefox=src/main/resources/geckodriver.exe
 
 baseUrl=http://the-internet.herokuapp.com
@@ -8,4 +8,4 @@ loginUrl=/login
 frameUrl=/nested_frames
 dropdownUrl=/dropdown
 
-loginCredsXLS=
+loginCredsXLS=C:\\Users\\Alan Cleetus\\Desktop\\invalidLoginCreds.xls

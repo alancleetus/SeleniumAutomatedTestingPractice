@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite parallel="false" name="Full Test Suite">
+<suite parallel="true" thread-count="4" name="Full Test Suite">
 	
 	<test name="LoginTest">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="tests.loginPageTest.LoginPageTest" />
+			<class name="tests.LoginPageTest" />
 		</classes>
 	</test> 
 	
 	<test name="NegativeLoginTest">
-		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browser" value="firefox"></parameter>
 		<classes>
-			<class name="tests.loginPageTest.NegativeLoginTest" />
+			<class name="tests.NegativeLoginTest" />
 		</classes>
 	</test> 
 	
 	<test name="FrameTest">
-		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browser" value="msedge"></parameter>
 		<classes>
-			<class name="tests.frameTest.FrameTest" />
+			<class name="tests.FrameTest" />
 		</classes>
 	</test>
 	
@@ -27,7 +27,7 @@
 	<test name="DropDownTest">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="tests.dropDownTest.DropDownTest" />
+			<class name="tests.DropDownTest" />
 		</classes>
 	</test>
 	
@@ -35,9 +35,8 @@
 	<test name="CheckBoxTest">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="tests.checkboxTest.CheckboxTest" />
+			<class name="tests.CheckboxTest" />
 		</classes>
 	</test>
 	
-	 
 </suite> 

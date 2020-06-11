@@ -1,4 +1,4 @@
-package tests.loginPageTest;
+package tests;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -9,18 +9,16 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import base.BaseTest;
 import pages.LoginFailurePage;
 import pages.LoginPage;
-import tests.BaseTest;
-import tests.utilities.Excel;
+import utilities.Excel;
 
 public class NegativeLoginTest extends BaseTest {
 
-	@Test(priority = 1, dataProvider = "getXLSData")
+	@Test(dataProvider = "getXLSData")
 	public void negativeTest(String username, String password, String expectedErrorMessage) {
-		log.info("Starting negativeTest");
 		driver.get(cr.getLoginUrl());
-
 		LoginPage loginPage = new LoginPage(driver);
 		LoginFailurePage failPage = loginPage.invalidLogin(username, password);
 
@@ -40,7 +38,7 @@ public class NegativeLoginTest extends BaseTest {
 
 	@DataProvider(name = "getXLSData") // supplying data for a test method.
 	public Object[][] getXLSData() {
-		return Excel.get("C:\\Users\\Alan Cleetus\\Desktop\\invalidLoginCreds.xls");
+		return Excel.get(cr.getLoginCredsXLS());
 
 	}
 

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.loginPageTest.NegativeLoginTest">
+      <class name="tests.dropDownTest.DropDownTest">
         <methods>
-          <include name="negativeTest"/>
-          <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testDropDown"/>
         </methods>
-      </class> <!-- tests.loginPageTest.NegativeLoginTest -->
+      </class> <!-- tests.dropDownTest.DropDownTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

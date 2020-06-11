@@ -1,4 +1,4 @@
-package tests.utilities;
+package utilities;
 
 import java.util.List;
 import java.io.BufferedReader; 

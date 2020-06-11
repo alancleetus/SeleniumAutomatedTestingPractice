@@ -1,22 +1,19 @@
-package tests.loginPageTest;
+package tests;
 
 import org.testng.annotations.Test;
 
+import base.BaseTest;
 import pages.LoginPage;
 import pages.LoginSuccessPage;
-import tests.BaseTest;
+
 import org.testng.Assert; 
 
 public class LoginPageTest extends BaseTest {
 
 	@Test
 	public void testLogin() {
-
-		log.info("starting login page test");
 		driver.get(cr.getLoginUrl());
-
 		LoginPage loginPage = new LoginPage(driver);
-
 		LoginSuccessPage successPage = loginPage.validLogin("tomsmith", "SuperSecretPassword!");
 
 		// Verifications:
