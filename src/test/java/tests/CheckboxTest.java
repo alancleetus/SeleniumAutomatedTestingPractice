@@ -20,7 +20,5 @@ public class CheckboxTest extends BaseTest{
 			checkbox.click();
 			log.info("after clicking: "+checkbox.isSelected());
 		}
-	
 	}
-
 }

@@ -4,14 +4,14 @@
 	<test name="LoginTest">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="tests.loginPageTest.LoginPageTest" />
+			<class name="tests.LoginPageTest" />
 		</classes>
 	</test> <!-- Test -->
 	
 	<test name="NegativeLoginTest">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="tests.loginPageTest.NegativeLoginTest" />
+			<class name="tests.NegativeLoginTest" />
 		</classes>
 	</test> <!-- Test -->
 	
